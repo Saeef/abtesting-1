@@ -1,0 +1,7 @@
+name = abtesting
+description = Unobstrusive abtesting solution
+package = Core
+version = VERSION
+core = 7.x
+files[] = abtesting.test
+;configure = admin/structure/abtesting
