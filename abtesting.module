@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Implements hook_init().
  */
@@ -11,21 +10,10 @@ function abtesting_init() {
   $path = drupal_get_path('module', 'abtesting');
   drupal_add_js($path . '/abtesting/abtesting.js');
 
-  // Set here variables that need to be passed to javascript
-  // A random number 1-10, users < 6, group-a, users >= 6, group-b
-  // @todo -- move it to javascript
-  $random = mt_rand(0, 10);
 
-  if ($random < 6) {
-    // User belong to group A
-    $user_group = 'a';
-  } else {
-    $user_group = 'b';
-  }
 
   $settings = array(
     'basePath' => $base_path;
-    'userGroup' => $user_group;
   );
   drupal_add_js(array('abtesting' => $settings), 'settings');
 }
