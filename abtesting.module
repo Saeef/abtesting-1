@@ -1,0 +1,19 @@
+<?php
+/**
+ * Implements hook_init().
+ */
+function abtesting_init() {
+  /*We'll be using jQuery.cookie provide by Drupal in core.
+  This allow us creating, reading and deleting cookies.
+  This library is not loaded unless specifically loaded.*/
+  drupal_get_library('system', 'jquery.cookie');
+  $path = drupal_get_path('module', 'abtesting');
+  drupal_add_js($path . '/abtesting/abtesting.js');
+
+
+
+  $settings = array(
+    'basePath' => $base_path;
+  );
+  drupal_add_js(array('abtesting' => $settings), 'settings');
+}
