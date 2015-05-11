@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ABTesting</title>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/cohorts/lib/cohorts.js"></script>
+	<script type="text/javascript" src="firstTest.js"></script>
+	<style type="text/css">
+	#big {display: none;}
+	#small {display: none;}
+	</style>
+</head>
+<body>
+<div id="big" class="header">
+	<h1>Big</h1>
+	<button id="signup-button" class="btn btn-large">Button value</button>
+</div>
+
+<div id="small" class="header">
+	<small>Small</small>
+	<button id="signup-button">Button value</button>
+</div>
+
+<!--The snippet below represents the minimum configuration needed to track a page asynchronously.-->
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8040421-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+
+  (function() {
+    var u="//localhost/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 2]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//localhost/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+</body>
+</html>

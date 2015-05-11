@@ -1,0 +1,14 @@
+{
+  "name": "cohorts",
+  "homepage": "https://github.com/jamesyu/cohorts",
+  "_release": "db951dba7b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "db951dba7b7e82060c4e1391ca7a68bfd4ad8074"
+  },
+  "_source": "https://github.com/jamesyu/cohorts.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/jamesyu/cohorts.git",
+  "_direct": true
+}

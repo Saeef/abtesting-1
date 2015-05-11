@@ -1,0 +1,27 @@
+{
+  "name": "abtester",
+  "version": "0.0.1",
+  "authors": [
+    "Ovi Farcas <ovi@jazio.net>"
+  ],
+  "description": "AB Testing Frontend Tool",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "abtesting"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "cohorts": "https://github.com/jamesyu/cohorts.git",
+    "jquery" : ">=1.10"
+  }
+}
