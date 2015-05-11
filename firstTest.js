@@ -26,6 +26,7 @@ var bigsmall = new Cohorts.Test({
 
         storageAdapter: {
                  nameSpace: 'cohorts',
+                 testName: 'bigsmall',
                  // The TrackEvent method is not run directly, it's triggered by onInitialize and onEvent
                  // onEvent appends some info to the label so that it can be distinguished as a conversion
                  trackEvent: function(category, action, opt_label, opt_value, int_hit, cv_slot, scope) { 
@@ -36,7 +37,7 @@ var bigsmall = new Cohorts.Test({
                 // onInitialize runs every time a test does
                 // It tracks total users each variant was served to
                  onInitialize: function(inTest, testName, cohort, cv_slot, scope) {
-                     if(inTest && scope !== 3) {
+                     if(inTest) {
                         this.trackEvent(this.nameSpace, testName, cohort, 0, true, cv_slot, scope);
                      }
                  },
